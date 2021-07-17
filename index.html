@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="main">
+      <header class="header">
+        <h1 id="title">CoffeeWork</h1>
+        <p id="description">Su opini&oacute;n nos ayuda a mejorar</p>
+      </header>
+      <form id="survey-form" action="/survey-submit" method="POST">
+        <label id="name-label" for="name">
+          <span class="label__span">Nombre</span>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Ingrese su nombre"
+            required
+          />
+        </label>
+        <label id="email-label" for="email">
+          <span class="label__span">Email</span>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Ingrese su email"
+            required
+          />
+        </label>
+        <label id="dropdown-label " for="dropdown">
+          <span class="label__span">¿Qu&eacute; variedad compro?</span>
+          <select name="type-coffee" id="dropdown">
+            <option selected disabled>Selecione la variedad</option>
+            <option value="1">Typica</option>
+            <option value="2">Bourbon</option>
+            <option value="3">Caturra</option>
+            <option value="4">Maragogipe</option>
+            <option value="5">Geisha</option>
+            <option value="6">Los h&iacute;bridos</option>
+            <option value="7">Mundo Novo</option>
+            <option value="8">Catuai</option>
+            <option value="9">Timor</option>
+            <option value="10">Catimor</option>
+            <option value="11">Sarchimores</option>
+          </select>
+        </label>
+        <label id="number-label" for="number">
+          <span class="label__span">¿Cu&aacute;ntos frascos compro?</span>
+          <input
+            type="number"
+            name="number"
+            id="number"
+            placeholder="Cantidad"
+            min="1"
+            max="50"
+          />
+        </label>
+        <div class="input-group">
+          <span class="label__span"
+            >¿Qu&eacute; aspectos fueron de su agrado?</span
+          >
+          <label class="label-check" for="check1">
+            <input type="checkbox" name="check1" id="check1" value="Sabor" />
+            <span class="span">Sabor</span>
+          </label>
+          <label class="label-check" for="check2">
+            <input type="checkbox" name="check2" id="check2" value="Olor" />
+            <span class="span">Olor</span>
+          </label>
+          <label class="label-check" for="check3">
+            <input type="checkbox" name="check3" id="check3" value="Color" />
+            <span class="span">Color</span>
+          </label>
+          <label class="label-check" for="check4">
+            <input type="checkbox" name="check4" id="check4" value="Textura" />
+            <span class="span">Textura</span>
+          </label>
+          <label class="label-check" for="check5">
+            <input type="checkbox" name="check5" id="check5" value="Frescura" />
+            <span class="span">Frescura</span>
+          </label>
+          <label class="label-check" for="check6">
+            <input type="checkbox" name="check6" id="check6" value="Densidad" />
+            <span class="span">Densidad</span>
+          </label>
+          <label class="label-check" for="check7">
+            <input
+              type="checkbox"
+              name="check7"
+              id="check7"
+              value="Presentaci&oacute;n"
+            />
+            <span class="span">Presentaci&oacute;n</span>
+          </label>
+        </div>
+        <div class="input-group">
+          <span class="label__span"
+            >¿Volver&iacute;a a comprar nuestro caf&eacute;?</span
+          >
+          <label class="label-radio" for="opt1">
+            <input type="radio" name="back-buy" id="opt1" value="si" />
+            <span class="span">Si</span>
+          </label>
+          <label class="label-radio" for="opt2">
+            <input type="radio" name="back-buy" id="opt2" value="no" />
+            <span class="span">No</span>
+          </label>
+        </div>
+        <label for="comments">
+          <span class="label__span">¿Tienen alg&uacute;n comentario?</span>
+          <textarea name="comments" id="comments"></textarea>
+        </label>
+        <input type="submit" id="submit" value="Enviar" />
+      </form>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
